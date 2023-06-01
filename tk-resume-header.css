@@ -365,7 +365,7 @@
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   height: auto;
   font-size: 1.25rem;
   margin-left: auto;
@@ -564,5 +564,9 @@
   }
   .lw-content li {
     font-size: 1.25rem;
+  }
+
+  .tk-contact-form {
+    width: 50%;
   }
 }
