@@ -420,7 +420,7 @@
 /* MEDIA QUERY STARTS HERE!!!!!!!!!!!!! */
 /* MEDIA QUERY STARTS HERE!!!!!!!!!!!!! */
 /* MEDIA QUERY STARTS HERE!!!!!!!!!!!!! */
-@media (min-width: 1281px) and (max-width: 1920px) {
+@media (min-width: 1281px) and (max-width: 3440px) {
   .tk-container {
     padding: 0px;
   }

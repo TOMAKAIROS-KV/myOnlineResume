@@ -7,9 +7,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 10vh;
-  background-color: transparent;
-  padding: 25px;
+  height: auto;
+  background-color: rgb(12, 13, 15);
+  padding: 15px;
   z-index: 3;
 }
 
