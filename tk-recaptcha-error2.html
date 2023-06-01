@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="utf-8" />
@@ -9,14 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./tk-general.css" />
     <link rel="stylesheet" href="./tk-navbar.css" />
-    <link rel="stylesheet" href="./tk-resume-header.css" />
-    <link rel="stylesheet" href="./tk-projects.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .tk-reCaptcha a {
+        color: darkgrey;
+      }
+      .tk-reCaptcha a:hover {
+        color: grey;
+      }
+    </style>
   </head>
   <!--BODY EDIT STARTS HERE-->
   <body>
@@ -28,34 +33,26 @@
       <div class="tk-menu-container">
         <ul class="tk-menu-list">
           <li><a href="./index.html" class="menu-link">.myResume</a></li>
-          <li><a href="./tk-projects.html" class="menu-link">.myProjects</a></li>
+          <li>
+            <a href="./tk-projects.html" class="menu-link">.myProjects</a>
+          </li>
         </ul>
       </div>
     </header>
 
     <!--MAIN CONTAINER STARTS HERE-->
-    <main class="main-container">
-      <section id="tk-top" class="tk-container">
-          <h1 id="tk-top-h1">.myProjects</h1>
+    <main class="tk-container">
+      <section id="tk-1" class="tk-body1">
+        <div class="tk-reCaptcha">
+          <h1>Oops! Something went wrong.</h1>
+          <br />
+          <h1><a href="#" onclick="goBack()">Please try again.</a></h1>
         </div>
       </section>
-      <section class="tk-project-container" id="tk-project1">
-        <div class="project-box">
-          <img src="./images/TOMAKAIROS_a_simple_black_and_white_UHD_8K_wallpaper_symbolizin_840869b6-2b01-4285-a82e-f45e4fe7e44c.png">
-          <div class="project-text"><a href="https://tomakairos.com/" class="project-link"><h1>"TOMAKAIROS"</h1></a></div>
-          <div class="project-text"><p>This website is powered by Virtualmin on a Ubuntu server, and developed with HTML, CSS, JavaScript, and PHP.</p></div>
-        </div>
-      <div class="project-box">
-        <img src="./images/TOMAKAIROS_a_simple_black_and_white_UHD_8K_wallpaper_symbolizin_840869b6-2b01-4285-a82e-f45e4fe7e44c.png">
-        <div class="project-text"><a href="https://myrhhc.com/" class="project-link"><h1>"Mark Your Home Health Care"</h1></a></div>
-        <div class="project-text"><p>This website is powered by Virtualmin on a Ubuntu server, and developed with Elementor, HTML, and CSS as needed.</p></div>
-      </div>
-  </section>
     </main>
     <!--<script src="./script.js"></script>-->
     <footer class="footer">
       <p class="copyright">&copy; 2023 TOMAKAIROS. All rights reserved.</p>
     </footer>
-    <script src="./tk-projects.js"></script>
   </body>
 </html>

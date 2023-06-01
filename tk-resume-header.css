@@ -375,6 +375,10 @@
   text-align: center;
 }
 
+.tk-contact-form h1 {
+  font-size: 2rem;
+}
+
 .tk-contact-form-email {
   display: flex;
   flex-direction: column;
@@ -464,13 +468,13 @@
 
   @keyframes moveUpDown {
     0% {
-      bottom: 170px;
+      bottom: 220px;
     }
     50% {
-      bottom: 180px;
+      bottom: 230px;
     }
     100% {
-      bottom: 170px;
+      bottom: 220px;
     }
   }
   .tk-content1::before {

@@ -56,3 +56,26 @@ handleBoxShadowChange();
 
 // Check box shadow on scroll
 window.addEventListener("scroll", handleBoxShadowChange);
+
+window.addEventListener("load", function () {
+  var tkContainer = document.querySelector(".tk-container");
+
+  function handleResize() {
+    var windowWidth = window.innerWidth;
+    if (windowWidth >= 1080 && windowWidth <= 3440) {
+      // Check if it's within the specified width range
+      tkContainer.style.height = "40vh";
+      tktoph1.style.transform = "translateY(150px)"; // Updated line
+    } else {
+      // Reset the styles if it's outside the specified width range
+      tkContainer.style.height = "";
+      tktoph1.style.transform = ""; // Updated line
+    }
+  }
+
+  // Initial check on load
+  handleResize();
+
+  // Add event listener for window resize
+  window.addEventListener("resize", handleResize);
+});

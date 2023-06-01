@@ -4,6 +4,7 @@
   width: auto;
   height: 100vh;
   justify-content: space-between;
+  background-color: rgb(12, 13, 15);
 }
 
 .tk-container {
@@ -28,13 +29,6 @@
   z-index: 1;
   background-color: rgb(12, 13, 15);
   transition: all 0.25s ease-in-out 0s;
-}
-
-#tk-top-h1:hover {
-  transform: scale(1.15);
-  background-color: white;
-  color: black;
-  cursor: pointer;
 }
 
 .horizontal-line {
@@ -84,7 +78,10 @@
 
 .project-link {
   color: white;
-  text-decoration: none;
+  transition: all 0.25s ease-in-out 0s;
+}
+.project-link:hover {
+  color: grey;
 }
 
 .project-box img {
@@ -97,12 +94,14 @@
   margin: 25px 0px 0px 0px;
   color: white;
 }
-
 .project-text p {
   font-size: 1rem;
 }
 
 @media (min-width: 1080px) and (max-width: 3440px) {
+  .tk-container {
+    transition: height 1s ease-in-out 0s;
+  }
   .project-box {
     width: 50%;
   }
