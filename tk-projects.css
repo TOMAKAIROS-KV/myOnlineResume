@@ -1,0 +1,109 @@
+/* PROJECT PAGE STARTS HERE!!!!!!!*/
+
+.main-container {
+  width: auto;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.tk-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh; /* Adjust this as needed to match the parent container's height */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#tk-top-h1 {
+  opacity: 0;
+  text-align: center;
+  width: auto;
+  font-size: 1.75rem;
+  padding: 10px 20px;
+  border: 2.5px solid white;
+  z-index: 1;
+  background-color: rgb(12, 13, 15);
+  transition: all 0.25s ease-in-out 0s;
+}
+
+#tk-top-h1:hover {
+  transform: scale(1.15);
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.horizontal-line {
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-top: 1px solid white;
+  padding: 0;
+}
+
+#tk-mid {
+}
+
+/* Frame/Display */
+.tk-project-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto; /* Adjust this as needed to match the parent container's height */
+  width: 100%;
+  padding: 50px;
+  background-color: rgb(12, 13, 15);
+  gap: 100px;
+}
+
+.project-box {
+  width: auto;
+  height: auto;
+  border-radius: 0px;
+  border: 1px solid white;
+  background-color: transparent;
+  box-shadow: 0px 0px 10px rgb(80, 81, 85);
+  transition: all 0.5s ease-in-out 0s;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-box.box-shadow-visible {
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.project-link {
+  color: white;
+  text-decoration: none;
+}
+
+.project-box img {
+  float: left;
+  width: 100%;
+}
+
+.project-text {
+  text-align: center;
+  margin: 25px 0px 0px 0px;
+  color: white;
+}
+
+.project-text p {
+  font-size: 1rem;
+}
+
+@media (min-width: 1080px) and (max-width: 3440px) {
+  .project-box {
+    width: 50%;
+  }
+}

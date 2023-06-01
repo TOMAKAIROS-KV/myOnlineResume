@@ -1,0 +1,85 @@
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Share Tech Mono", monospace;
+}
+
+/* Layout */
+html,
+body,
+.main-container,
+.container {
+  scroll-behavior: smooth;
+  /*overflow: hidden;*/
+}
+
+body {
+  overflow-x: scroll;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  /*color:; /*add color value here*/
+}
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.75rem;
+}
+
+ul {
+}
+
+li {
+}
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+/*
+  COLOR PALLETE THEME FOR THIS PAGE:
+  DARK GREY BLACK SHADE - rgb(57, 62, 70); color code: #393E46
+  FOREST MINT GREEN - rgb(247, 247, 247, 1); color code: #6D9886
+  PALE KHAKI - rgb(242, 231, 213, 1); color code: #F2E7D5 
+  PALE WHITE - rgb(247, 247, 247, 1) color code: #F7F7F7 
+  */
+
+/* MAIN CONTAINERS START HERE */
+/* Set the height and width of the main container */
+.tk-container {
+  width: auto;
+  height: 100%;
+  overflow-y: scroll; /* or 'auto' */
+  background-color: rgb(12, 13, 15);
+  color: white;
+}
+
+/* footer */
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}

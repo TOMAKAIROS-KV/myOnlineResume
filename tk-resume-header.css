@@ -1,0 +1,549 @@
+#tk-2 {
+  position: relative;
+}
+
+.tk-body1 {
+  margin: 50px auto 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.tk-createwrap {
+  position: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Add this line */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  opacity: 0;
+}
+
+.tk-align-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.tk-profile-pic img {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.tk-img-link {
+  animation: slide-down 0.75s ease-in-out forwards;
+}
+
+.tk-content-text {
+  text-align: left;
+}
+
+.tk-content-text h1 {
+  margin-bottom: 20px;
+}
+
+.tk-img-link ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 4rem;
+  /*border: 1px solid blue; (useful for debugging) */
+}
+
+.tk-img-link li {
+  list-style: none;
+  position: relative;
+  z-index: 4;
+  /* padding: 7.5px 20px 7.5px 20px; (top-padding, right-padding, bottom-padding, left-padding) */
+  /* border: 2px solid white; */
+  /* border-radius: 10px; */
+}
+
+/* Menu Hyperlinks */
+.tk-img-link a {
+  position: relative;
+  color: rgba(247, 247, 247, 1);
+  font-size: 1.5rem;
+  text-decoration: underline;
+  padding: 7px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.tk-img-link a:hover {
+  color: rgba(247, 247, 247, 0.5);
+}
+
+/* Menu Bracket Animation */
+.tk-img-link a::before {
+  content: "{";
+  position: absolute;
+  left: -10px;
+  color: rgba(247, 247, 247, 1);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.tk-img-link a::after {
+  content: "}";
+  position: absolute;
+  right: -10px;
+  color: rgba(247, 247, 247, 1);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.tk-img-link a:hover::before {
+  transform: translateX(5px);
+  color: rgba(247, 247, 247, 0.5);
+}
+
+.tk-img-link a:hover::after {
+  transform: translateX(-5px);
+  color: rgba(247, 247, 247, 0.5);
+}
+
+.tk-content-down-arrow {
+  font-size: 1.25rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+@keyframes moveUpDown {
+  0% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+.tk-content-down-arrow::after {
+  content: "\25bc  Scroll Down \25bc";
+  color: white;
+}
+
+.tk-content1::before {
+  content: ".myWorkExperience";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.tk-arrow-animation {
+  opacity: 0;
+  animation: fade-arrow 1s linear forwards, moveUpDown 1s infinite ease-in-out;
+}
+
+@keyframes fade-arrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.tk-content1 {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 60%;
+  border: 1px solid white;
+  border-radius: 0px;
+  opacity: 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.timelinePosition {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.line {
+  position: relative;
+  height: 0;
+  width: 1px;
+  background-color: white;
+  margin: 0 auto; /* this centers the line */
+  opacity: 0;
+}
+
+.animateLine {
+  opacity: 0;
+  animation: animateLine 1s linear forwards;
+}
+
+@keyframes animateLine {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+.fade {
+  opacity: 0;
+  animation: fade 1s linear forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.linetext {
+  width: 50%;
+  border: 1px solid white;
+  padding: 15px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+
+  opacity: 0;
+}
+
+.linetext h1 {
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.linetext h2 {
+  font-size: 0.85rem;
+  padding: 5px;
+}
+
+.linetext p {
+  font-size: 0.7rem;
+  padding: 5px;
+}
+
+.linetext:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/*leave these temporarily blank */
+#line1text {
+}
+#line2text {
+}
+#line3text {
+}
+#line4text {
+  margin-bottom: 50px;
+}
+
+.linewindow {
+  position: absolute;
+  width: 75%;
+  border: 1px solid white;
+  padding: 25px;
+  margin: 0 auto;
+  background-color: rgb(12, 13, 15);
+  justify-content: space-evenly;
+  display: none;
+  opacity: 0;
+}
+
+.linewindow.show-linewindow {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 0;
+  animation: fadewindow 0.25s ease-in-out;
+  animation-fill-mode: forwards; /* Keeps the final state of the animation */
+}
+
+@keyframes fadewindow {
+  to {
+    opacity: 1;
+  }
+}
+
+.linewindow.fade-out {
+  animation: fadewindow-out 0.25s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadewindow-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.lw-content {
+  padding: 20px;
+}
+
+.lw-content h1 {
+  font-size: 1.25rem;
+}
+.lw-content h2 {
+  font-size: 1rem;
+}
+.lw-content p {
+  font-size: 0.85rem;
+}
+.lw-content li {
+  font-size: 0.75rem;
+}
+
+.tk-cls-btn {
+  font-size: 0.75rem;
+  padding: 5px 10px 5px 10px;
+  margin-top: 50px;
+  border: 1px solid white;
+  width: auto;
+  text-align: center;
+  float: right;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.tk-cls-btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.skills-container {
+  width: 75%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-spacing {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.container-spacing h1 {
+  margin-bottom: 50px;
+}
+
+.tk-contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-size: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.tk-contact-form-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30px;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+}
+
+.tk-contact-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 25px;
+}
+.tk-contact-form-message-box {
+  height: 200px;
+  font-size: 1.25rem;
+  padding: 20px;
+  margin: 20px;
+  resize: none;
+}
+
+.tk-submit-button {
+  padding: 10px;
+  width: 100px;
+  font-size: 1.25rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out 0s;
+  margin-bottom: 100px;
+}
+
+.tk-submit-button:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+/* MEDIA QUERY STARTS HERE!!!!!!!!!!!!! */
+/* MEDIA QUERY STARTS HERE!!!!!!!!!!!!! */
+/* MEDIA QUERY STARTS HERE!!!!!!!!!!!!! */
+/* MEDIA QUERY STARTS HERE!!!!!!!!!!!!! */
+@media (min-width: 1281px) and (max-width: 1920px) {
+  .tk-container {
+    padding: 0px;
+  }
+
+  .tk-body1 {
+    height: 100vh;
+  }
+
+  .tk-createwrap {
+    flex-direction: row;
+  }
+
+  .tk-align-text {
+  }
+
+  .tk-profile-pic img {
+    width: 300px;
+  }
+
+  .tk-content-text h1 {
+    font-size: 2rem;
+  }
+
+  .tk-content-text p {
+    font-size: 1.25rem;
+  }
+
+  .tk-img-link a {
+    font-size: 1.5rem;
+  }
+
+  .tk-content-down-arrow {
+    font-size: 2rem;
+  }
+
+  .tk-content-down-arrow::after {
+  }
+
+  @keyframes moveUpDown {
+    0% {
+      bottom: 170px;
+    }
+    50% {
+      bottom: 180px;
+    }
+    100% {
+      bottom: 170px;
+    }
+  }
+  .tk-content1::before {
+    font-size: 2.5rem;
+  }
+
+  .tk-content1 {
+    width: 40%;
+  }
+
+  .timelinePosition {
+  }
+
+  .line {
+  }
+
+  .animateLine {
+  }
+
+  .linetext {
+  }
+
+  .linetext h1 {
+  }
+
+  .linetext h2 {
+  }
+
+  .linetext p {
+  }
+
+  .linetext {
+    width: 30%;
+  }
+
+  .linetext h1 {
+    font-size: 1.5rem;
+    padding: 2px;
+  }
+
+  .linetext h2 {
+    font-size: 1.25rem;
+    padding: 5px;
+  }
+
+  .linetext p {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .line1 {
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .container-spacing {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 22.22%;
+    height: 350px;
+  }
+  .container-spacing h1 {
+    margin-bottom: 50px;
+  }
+}

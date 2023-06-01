@@ -1,0 +1,140 @@
+/* Navigation Container */
+.tk-nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  background-color: transparent;
+  padding: 25px;
+  z-index: 3;
+}
+
+/* Logo */
+.tk-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  padding: 0;
+  padding-left: 3px;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Menu Container */
+.tk-menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.tk-toggle-checkbox {
+  display: none;
+}
+
+.tk-toggle-label {
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgba(247, 247, 247, 1);
+  /* Adjust the positioning as needed */
+  order: 2; /* Reorder the toggle label to the right */
+  border: 1px solid white;
+  padding: 0px 10px 5px 10px;
+  transform: scale(0.9);
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out 0s;
+}
+
+.tk-toggle-label:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Hide the menu list by default */
+.tk-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  /* Adjust the positioning as needed */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: transparent;
+  padding: 1rem;
+  width: 250px;
+  height: 150px;
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tk-toggle-checkbox:checked ~ .tk-menu-container .tk-menu-list {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tk-menu-list li {
+  list-style: none;
+  position: relative;
+  z-index: 4;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  top: -25px;
+  right: 12.5px;
+  background-color: rgb(12, 13, 15);
+}
+
+/* Menu Hyperlinks */
+
+.tk-menu-container a {
+  position: relative;
+  color: rgba(247, 247, 247, 1);
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 7px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.tk-menu-container a:hover {
+  color: rgba(247, 247, 247, 0.5);
+}
+
+/* Menu Bracket Animation */
+.tk-menu-container a::before {
+  content: "{";
+  position: absolute;
+  left: -10px;
+  color: rgba(247, 247, 247, 1);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.tk-menu-container a::after {
+  content: "}";
+  position: absolute;
+  right: -10px;
+  color: rgba(247, 247, 247, 1);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.tk-menu-container a:hover::before {
+  transform: translateX(5px);
+  color: rgba(247, 247, 247, 0.5);
+}
+
+.tk-menu-container a:hover::after {
+  transform: translateX(-5px);
+  color: rgba(247, 247, 247, 0.5);
+}
+
+@media (min-width: 1080px) and (max-width: 3440px) {
+  .tk-menu-list li {
+    top: -10px;
+  }
+}
